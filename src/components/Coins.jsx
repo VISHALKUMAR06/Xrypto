@@ -3,7 +3,7 @@ import axios from "axios";
 import { server } from "../index";
 import { Button, Container, HStack, Radio, RadioGroup } from "@chakra-ui/react";
 import Loader from "./Loader";
-import ErrorComponent from "./ErrorComponent";
+import ErrorComponent from "./ErrorComponent";        
 import CoinCard from "./CoinCard";
 
 const Coins = () => {
@@ -19,7 +19,7 @@ const Coins = () => {
   const changePage = (page) => {
     setPage(page);
     setLoading(true);
-  };
+  };   
 
   const btns = new Array(132).fill(1);
 
@@ -37,16 +37,16 @@ const Coins = () => {
       }
     };
     fetchCoins();
-  }, [currency, page]);
-
+  }, [currency, page]);   
+    
   if (error) return <ErrorComponent message={"Error While Fetching Coins"} />;
 
-  return (
+  return (    
     <Container maxW={"container.xl"}>
       {loading ? (
         <Loader />
       ) : (
-        <>
+        <>     
           <RadioGroup value={currency} onChange={setCurrency} p={"8"}>
             <HStack spacing={"4"}>
               <Radio value={"inr"}>INR</Radio>

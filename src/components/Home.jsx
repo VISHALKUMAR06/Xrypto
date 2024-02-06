@@ -9,9 +9,9 @@ const Home = () => {
       <motion.div
         style={{
           height: "80vh",
-        }}
+        }}   
         animate={{
-          translateY: "20px",
+          translateY: "65px",
         }}
         transition={{
           duration: 2,
@@ -35,7 +35,7 @@ const Home = () => {
         color={"whiteAlpha.700"}
         mt={"-20"}
       >
-        Xcrypto
+        Xcrypto 
       </Text>
     </Box>
   );

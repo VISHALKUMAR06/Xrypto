@@ -57,6 +57,7 @@ const Exchanges = () => {
   );
 };
 
+
 const ExchangeCard = ({ name, img, rank, url }) => (
   <a href={url} target={"blank"}>
     <VStack
